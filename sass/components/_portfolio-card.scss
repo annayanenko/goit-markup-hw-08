@@ -51,6 +51,9 @@
       line-height: 2;
       letter-spacing: 0.06em;
       color: var(--secondary-text-color);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     .portfolio-card__type {
