@@ -1,0 +1,29 @@
+.portfolio-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--main-color);
+
+  .portfolio-section__categories {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    .portfolio-section__categories {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

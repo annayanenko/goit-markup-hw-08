@@ -1,0 +1,32 @@
+.address-info {
+  .address-info__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > .address-info__list-item:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  .address-info__address-link {
+    color: var(--main-color);
+  }
+
+  .address-info__contact-link {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-info {
+    .address-info__list {
+      align-items: flex-start;
+    }
+  }
+}

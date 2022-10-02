@@ -1,0 +1,97 @@
+.section-hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: var(--footer-color);
+  padding: 118px 0;
+  text-align: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/bg-img-mobile@2x.jpg");
+  }
+}
+
+.section-hero__heading {
+  width: 360px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.section-hero__button {
+  width: 200px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/bg-img-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  (min-resolution: 192dpi) and (min-width: 768px),
+  (min-resolution: 2dppx) and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/bg-img-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    height: 600px;
+    padding: 200px 0;
+  }
+
+  .section-hero__heading {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.3;
+  }
+
+  .section-hero__button {
+    width: 216px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  (min-resolution: 192dpi) and (min-width: 1200px),
+  (min-resolution: 2dppx) and (min-width: 1200px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/bg-img@2x.jpg");
+  }
+}
