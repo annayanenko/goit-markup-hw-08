@@ -11,10 +11,12 @@
 
   .address-info__address-link {
     color: var(--main-color);
+    line-height: 1.7;
   }
 
   .address-info__contact-link {
     color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
 
     &:hover,
     &:focus {

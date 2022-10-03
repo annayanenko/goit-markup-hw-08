@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  & > .portfolio-list__item {
+  & > .portfolio-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -10,13 +10,6 @@
 @media screen and(min-width:768px) {
   .portfolio-list {
     justify-content: space-between;
-
-    & > .portfolio-list__item {
-      margin-bottom: 0;
-    }
-    & > .portfolio-list__item:not(:last-child) {
-      margin-bottom: 30px;
-    }
   }
 }
 

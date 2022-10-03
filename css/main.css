@@ -138,20 +138,25 @@ img {
 .section-heading {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .section-heading {
+    font-size: 36px;
+  }
+}
 .modal-window {
   position: absolute;
   top: 50%;
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
+  width: 300px;
   height: 609px;
   background-color: var(--main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -313,6 +318,11 @@ img {
   align-self: center;
 }
 
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal-window {
     width: 528px;
@@ -432,7 +442,7 @@ img {
   .contact-list > .contact-list__item:not(:last-child) {
     margin-right: 30px;
   }
-  .contact-list__link {
+  .contact-list .contact-list__link {
     font-size: 14px;
     line-height: 1.14;
   }
@@ -473,19 +483,13 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio-list > .portfolio-list__item {
+.portfolio-list > .portfolio-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-list {
     justify-content: space-between;
-  }
-  .portfolio-list > .portfolio-list__item {
-    margin-bottom: 0;
-  }
-  .portfolio-list > .portfolio-list__item:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -522,7 +526,7 @@ img {
   height: 100%;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card .portfolio-card__link .portfolio-card__overlay-text {
@@ -542,9 +546,6 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .portfolio-card .portfolio-card__link .portfolio-card__type {
   margin: 0;
@@ -557,6 +558,16 @@ img {
 @media screen and (min-width: 768px) {
   .portfolio-card {
     width: 354px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card .portfolio-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .portfolio-card .portfolio-card__content {
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -578,9 +589,11 @@ img {
 }
 .address-info .address-info__address-link {
   color: var(--main-color);
+  line-height: 1.7;
 }
 .address-info .address-info__contact-link {
   color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
 }
 .address-info .address-info__contact-link:hover, .address-info .address-info__contact-link:focus {
   color: var(--accent-color);
@@ -684,12 +697,14 @@ img {
   flex-direction: column;
   justify-content: space-around;
 }
+.page-footer__container > .page-footer__section:not(:last-child) {
+  margin-bottom: 60px;
+}
 
 .page-footer__section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
 }
 
 .page-footer__section-title {
@@ -1115,11 +1130,15 @@ img {
     padding-bottom: 94px;
   }
 }
+.mobile-menu__container {
+  position: relative;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
-  .mobile-menu__container {
-    position: relative;
-    padding: 48px 40px;
-  }
   .modal-menu {
     position: fixed;
     top: 0;
@@ -1150,7 +1169,7 @@ img {
     fill: var(--accent-color);
   }
   .modal-menu-nav__list {
-    margin-bottom: 302px;
+    margin-bottom: auto;
   }
   .modal-menu-nav__item:not(:last-child) {
     margin-bottom: 32px;
@@ -1199,6 +1218,7 @@ img {
   .modal-menu-media-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .modal-menu-media-list__item:not(:first-child) {
     padding-left: 10px;

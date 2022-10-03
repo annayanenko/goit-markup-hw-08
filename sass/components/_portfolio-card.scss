@@ -28,7 +28,7 @@
       height: 100%;
       padding: 63px 24px;
       background-color: rgba(33, 150, 243, 0.9);
-      transform: translateY(+100%);
+      transform: translateY(+101%);
       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -51,9 +51,6 @@
       line-height: 2;
       letter-spacing: 0.06em;
       color: var(--secondary-text-color);
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
 
     .portfolio-card__type {
@@ -69,6 +66,20 @@
 @media screen and (min-width: 768px) {
   .portfolio-card {
     width: 354px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card {
+    .portfolio-card__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .portfolio-card__content {
+      flex-grow: 1;
+    }
   }
 }
 

@@ -7,13 +7,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  & > .page-footer__section:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 .page-footer__section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
 }
 
 .page-footer__section-title {

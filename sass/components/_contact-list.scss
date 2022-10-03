@@ -54,10 +54,10 @@
     & > .contact-list__item:not(:last-child) {
       margin-right: 30px;
     }
-  }
 
-  .contact-list__link {
-    font-size: 14px;
-    line-height: 1.14;
+    .contact-list__link {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 }

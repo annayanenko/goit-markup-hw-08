@@ -1,9 +1,12 @@
-@media screen and (max-width: 767px) {
-  .mobile-menu__container {
-    position: relative;
-    padding: 48px 40px;
-  }
+.mobile-menu__container {
+  position: relative;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+@media screen and (max-width: 767px) {
   .modal-menu {
     position: fixed;
     top: 0;
@@ -41,7 +44,7 @@
   }
 
   .modal-menu-nav__list {
-    margin-bottom: 302px;
+    margin-bottom: auto;
   }
 
   .modal-menu-nav__item {
@@ -105,6 +108,7 @@
   .modal-menu-media-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .modal-menu-media-list__item {
